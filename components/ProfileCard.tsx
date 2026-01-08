@@ -19,6 +19,7 @@ export default function ProfileCard() {
         const vcardContent = `BEGIN:VCARD
 VERSION:3.0
 FN:${contact.name}
+N:Ramachandran;Rahul;;;
 ORG:Viraworkx
 TITLE:${contact.role}
 TEL;TYPE=WORK,VOICE:${contact.phone}
@@ -55,42 +56,42 @@ END:VCARD`;
                 {/* Details */}
                 <div className="flex-1 text-center md:text-left space-y-4">
                     <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{contact.name}</h2>
-                        <p className="text-lg text-primary font-medium italic">{contact.role}</p>
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-black">{contact.name}</h2>
+                        <p className="text-xl md:text-2xl text-secondary font-bold">{contact.role}</p>
 
                         {/* Social Icons */}
-                        <div className="flex gap-4 mt-3 justify-center md:justify-start">
-                            <a href="https://x.com/rahulram2712" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black transition-colors"><TwitterIcon className="w-5 h-5" /></a>
-                            <a href="https://www.linkedin.com/in/rahul-ramachandran-42618419/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#0A66C2] transition-colors"><LinkedInIcon className="w-6 h-6" /></a>
+                        <div className="flex gap-4 mt-4 justify-center md:justify-start">
+                            <a href="https://x.com/rahulram2712" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors hover:scale-110"><TwitterIcon className="w-6 h-6" /></a>
+                            <a href="https://www.linkedin.com/in/rahul-ramachandran-42618419/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors hover:scale-110"><LinkedInIcon className="w-7 h-7" /></a>
                         </div>
                     </div>
 
-                    <div className="space-y-3 mt-6">
-                        <a href={`tel:${contact.phone}`} className="flex items-center justify-center md:justify-start gap-3 text-gray-700 hover:text-primary transition-colors group">
-                            <PhoneIcon className="w-5 h-5 text-secondary group-hover:scale-110 transition-transform" />
-                            <span>{contact.phone}</span>
+                    <div className="space-y-4 mt-8">
+                        <a href={`tel:${contact.phone}`} className="flex items-center justify-center md:justify-start gap-4 text-gray-800 hover:text-primary transition-colors group">
+                            <PhoneIcon className="w-6 h-6 text-accent group-hover:scale-110 transition-transform" />
+                            <span className="font-semibold text-lg">{contact.phone}</span>
                         </a>
 
-                        <a href={`mailto:${contact.email}`} className="flex items-center justify-center md:justify-start gap-3 text-gray-700 hover:text-primary transition-colors group">
-                            <EmailIcon className="w-5 h-5 text-secondary group-hover:scale-110 transition-transform" />
-                            <span>{contact.email}</span>
+                        <a href={`mailto:${contact.email}`} className="flex items-center justify-center md:justify-start gap-4 text-gray-800 hover:text-primary transition-colors group">
+                            <EmailIcon className="w-6 h-6 text-accent group-hover:scale-110 transition-transform" />
+                            <span className="font-semibold text-lg">{contact.email}</span>
                         </a>
 
-                        <a href={contact.websiteUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start gap-3 text-gray-700 hover:text-primary transition-colors group">
-                            <GlobeIcon className="w-5 h-5 text-secondary group-hover:scale-110 transition-transform" />
-                            <span>{contact.website}</span>
+                        <a href={contact.websiteUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start gap-4 text-gray-800 hover:text-primary transition-colors group">
+                            <GlobeIcon className="w-6 h-6 text-accent group-hover:scale-110 transition-transform" />
+                            <span className="font-semibold text-lg">{contact.website}</span>
                         </a>
 
-                        <div className="flex items-start justify-center md:justify-start gap-3 text-gray-700 group">
-                            <MapPinIcon className="w-5 h-5 text-secondary mt-1 group-hover:scale-110 transition-transform" />
-                            <span>{contact.address}</span>
+                        <div className="flex items-start justify-center md:justify-start gap-4 text-gray-800 group">
+                            <MapPinIcon className="w-6 h-6 text-accent mt-1 group-hover:scale-110 transition-transform" />
+                            <span className="font-semibold text-lg">{contact.address}</span>
                         </div>
                     </div>
 
-                    <div className="pt-6">
+                    <div className="pt-8">
                         <button
                             onClick={handleDownloadVCard}
-                            className="px-6 py-2.5 bg-primary hover:bg-teal-800 text-white font-semibold rounded-lg shadow-md transition-all active:scale-95 cursor-pointer"
+                            className="px-8 py-3 bg-gradient-to-r from-primary to-secondary hover:brightness-110 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all active:scale-95 cursor-pointer w-full md:w-auto"
                         >
                             Add to Contact
                         </button>
