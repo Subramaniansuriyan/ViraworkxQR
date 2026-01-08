@@ -6,7 +6,7 @@ import { PhoneIcon, EmailIcon, GlobeIcon, MapPinIcon, TwitterIcon, LinkedInIcon 
 
 export default function ProfileCard() {
     const contact = {
-        name: "Rahul Ramanchandran",
+        name: "Rahul Ramachandran",
         role: "Founder",
         phone: "+1 (470) 213-0571",
         address: "Houston Texas",
@@ -59,7 +59,7 @@ END:VCARD`;
                         <p className="text-lg text-primary font-medium italic">{contact.role}</p>
 
                         {/* Social Icons */}
-                        <div className="flex gap-4 mt-3">
+                        <div className="flex gap-4 mt-3 justify-center md:justify-start">
                             <a href="https://x.com/rahulram2712" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black transition-colors"><TwitterIcon className="w-5 h-5" /></a>
                             <a href="https://www.linkedin.com/in/rahul-ramachandran-42618419/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#0A66C2] transition-colors"><LinkedInIcon className="w-6 h-6" /></a>
                         </div>
